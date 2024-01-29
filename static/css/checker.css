@@ -1,0 +1,167 @@
+H1 {
+	align: center;
+}
+
+img {
+	height: 100px;
+    background-color: #FFF;
+    border-radius: 5px;
+    border-width: 1px;
+    border-top-color: #0f0f0f;
+    border-left-color: #555;
+    border-right-color: #555;
+    box-shadow: 0 3px 4px rgba(0,0,0,.08);
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.btn-default {
+	color: #333;
+	background-color: #cdddeb;
+	border-color: #ccc;
+}
+.title-sub {
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+}
+.message {
+    font-style: italic;
+    text-align: center;
+    font-color: #DD0000;
+    font-size: 14px;
+}
+.standard-footer {
+    height:50px;
+    width: 100%;
+    background-image: none;
+    background-color: #cdddeb;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;}
+
+.standard-footer p:last-child {
+    margin-bottom: 0;
+}
+.jumbotron {
+    color: #990000;
+    background-color: #eeeefd;
+    margin-top: 10px;
+    padding: 2% 2% 2% 2%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.note_card {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.note_card_ext {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  background-color: #eee;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.note_card_sm {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  padding: 5px 6px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Transition to a bigger shadow on hover */
+.note_card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* The fast way */
+.make-it-fast {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* Pre-render the bigger shadow, but hide it */
+.make-it-fast::after {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.note_card:hover::after {
+  opacity: 1;
+}
+
+.formatted_content code, .torso code {
+  font-style: normal;
+  font-weight: normal;
+}
+fieldset {
+    display: block;
+    -webkit-margin-start: 1px;
+    -webkit-margin-end: 10px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #336699;
+  color: #336699;
+  background-color: #EEE;
+  font-size:90%;
+  text-align:left;
+ }
+
+.hljs {
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: white;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+.alert-row td {
+  color: red;
+  font-weight: bold;
+}

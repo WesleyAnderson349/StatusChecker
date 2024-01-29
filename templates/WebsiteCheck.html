@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Website Status Checker</title>
+</head>
+<body>
+    <h1>Website Status Checker</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Check</button>
+    </form>
+
+    {% if status_info %}
+        <h2>Results:</h2>
+        <p>Website Name: {{ status_info.website_name }}</p>
+        <p>Status Code: {{ status_info.status_code }}</p>
+        <p>Status: {{ status_info.status_message }}</p>
+        <p>Response Time: {{ status_info.response_time }} seconds</p>
+        <p>Redirect URL: {% if status_info.redirect_url %}<a href="{{ status_info.redirect_url }}">{{ status_info.redirect_url }}</a>{% else %}None{% endif %}</p>
+    {% endif %}
+</body>
+</html>
