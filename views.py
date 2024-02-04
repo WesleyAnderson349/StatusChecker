@@ -18,26 +18,21 @@ def check_website(request):
         if form.is_valid():
             url = form.cleaned_data['url']
             try:
-                start_time = time.time()  # Record the start time
-                response = requests.get(url, timeout=5)  # Set a timeout for the request (e.g., 5 seconds)
-                end_time = time.time()  # Record the end time
+                start_time = time.time()  
+                response = requests.get(url, timeout=30) 
+                end_time = time.time()  
                 response_time = end_time - start_time
 
-                # Get the website name (hostname)
                 website_name = urlparse(url).hostname
 
-                # Get the status code
                 status_code = response.status_code
 
-                # Define status messages based on status codes
                 status_messages = {
                     200: 'Website is up!',
                     404: 'Website is not found (404)',
                     500: 'Internal Server Error (500)',
-                    # Add more status codes and messages as needed
                 }
 
-                # Determine the status message based on the status code
                 status_message = status_messages.get(status_code, 'Unknown Status')
 
                 # Check for redirection
