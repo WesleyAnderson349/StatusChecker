@@ -2,22 +2,36 @@
 
 {% block content %}
 <head>
-    <h1>Website Status Checker</h1>
+    <h1 class="mb-4">Website Status Checker</h1>
 </head>
+
 <body>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Check</button>
-    </form>
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="post" class="mb-3">
+                {% csrf_token %}
+                {{ form.as_p }}<button type="submit" class="btn btn-primary">Check</button>
+            </form>
+        </div>
+    </div>
 
     {% if status_info %}
-        <h2>Results:</h2>
-        <p>Website Name: {{ status_info.website_name }}</p>
-        <p>Status Code: {{ status_info.status_code }}</p>
-        <p>Status: {{ status_info.status_message }}</p>
-        <p>Response Time: {{ status_info.response_time }} seconds</p>
-        <p>Redirect URL: {% if status_info.redirect_url %}<a href="{{ status_info.redirect_url }}">{{ status_info.redirect_url }}</a>{% else %}None{% endif %}</p>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Results:</h2>
+                <p class="card-text">Website Name: {{ status_info.website_name }}</p>
+                <p class="card-text">Status Code: {{ status_info.status_code }}</p>
+                <p class="card-text">Status: {{ status_info.status_message }}</p>
+                <p class="card-text">Response Time: {{ status_info.response_time }} seconds</p>
+                <p class="card-text">Redirect URL: 
+                    {% if status_info.redirect_url %}
+                        <a href="{{ status_info.redirect_url }}">{{ status_info.redirect_url }}</a>
+                    {% else %}
+                        None
+                    {% endif %}
+                </p>
+            </div>
+        </div>
     {% endif %}
 </body>
 
